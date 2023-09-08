@@ -20,25 +20,12 @@ const slides = [
 const FlecheGauche = document.querySelector(".arrow_left")
 const FlecheDroite = document.querySelector(".arrow_right")
 
-let point1 = document.createElement("span")
-point1.classList = "dot"
-point1.id = "point1"
-document.querySelector(".dots").appendChild(point1)
-
-let point2 = document.createElement("span")
-point2.classList = "dot"
-point2.id = "point2"
-document.querySelector(".dots").appendChild(point2)
-
-let point3 = document.createElement("span")
-point3.classList = "dot"
-point3.id = "point3"
-document.querySelector(".dots").appendChild(point3)
-
-let point4 = document.createElement("span")
-point4.classList = "dot"
-point4.id = "point4"
-document.querySelector(".dots").appendChild(point4)
+for (let i=1; i<5; i++) {
+	let point = document.createElement('span')
+	point.classList = "dot"
+	point.id = "point" + i
+	document.querySelector(".dots").appendChild(point)
+}
 
 let currentslide = document.querySelector(".banner-img")
 let currentTagline = document.querySelector("p")
